@@ -1,0 +1,160 @@
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(0, 0%, 0%);
+}
+
+body,
+html {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: "Rubik", sans-serif;
+    background-color: rgba(223, 219, 219, 0.918);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    min-height: 35vh;
+    text-align: center;
+    padding: 1.5rem 6% 5.5rem 6%;
+    background: url(./images/pattern-bg-desktop.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+header>h1 {
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    margin-bottom: 1rem;
+    color: white;
+}
+
+header>form {
+    width: 100%;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+    max-width: 32rem;
+    margin: 0 auto;
+    /* border-radius: 10px; */
+    /* overflow: hidden; */
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+header>form>input[type="text"] {
+    padding: 1rem;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+header>form>input[type="text"]:user-invalid {
+    outline: none;
+    border: none;
+    outline: 2px solid red !important;
+}
+
+header>form>input[type="text"]:user-valid {
+    outline: 2px solid rgb(0, 255, 0);
+}
+
+header>form>label {
+    position: absolute;
+    left: -3000rem;
+}
+
+header>form>button {
+    background-color: black;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 1rem;
+    border-radius: 0 10px 10px 0;
+}
+
+.results-container {
+    width: 88%;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 2.2vw, 2rem);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: clamp(1rem, 1.6vw, 1.5rem);
+    flex-wrap: wrap;
+    border-radius: 12px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0.5rem 20px 10px rgba(0, 0, 0, 0.158);
+    z-index: 5;
+}
+
+.results-container>.result {
+    text-align: left;
+    flex-basis: 20%;
+    flex-grow: 1;
+    min-width: 180px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.results-container>.result:nth-child(-n + 3)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    border: 0.7px solid var(--dark-gray);
+}
+
+.results-container>.result>.result-head {
+    display: block;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    font-weight: bolder;
+    margin-bottom: clamp(0.6rem, 1.1vw, 1rem);
+    line-height: 1;
+}
+
+.results-container>.result>.result-main {
+    color: var(--very-dark-gray);
+    font-size: clamp(1.3rem, 2.2vw, 2rem);
+    font-weight: bold;
+    line-height: 1;
+}
+
+#map {
+    height: 20rem;
+    min-height: 65vh;
+    z-index: 1;
+}
+
+
+@media (max-width: 48em) {
+    .results-container>.result,
+    .results-container>.result:nth-child(-n + 3)::after {
+        text-align: center;
+        border: none;
+    }
+}
