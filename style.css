@@ -69,7 +69,7 @@ header>form>input[type="text"]:user-invalid {
     outline: 2px solid red !important;
 }
 
-header>form>input[type="text"]:user-valid {
+header>form>input[type="text"]:focus:user-valid {
     outline: 2px solid rgb(0, 255, 0);
 }
 

@@ -2,7 +2,7 @@ const ipAddressForm = document.querySelector("header>form");
 const dataElements = document.querySelectorAll(
   ".results-container>.result>.result-main"
 );
-const API_KEY = "";
+const API_KEY = "at_f9YGkjeiTkBOXbmVMovPCLcoQU7Ee";
 let map = L.map("map");
 
 const fetchData = async (apiKey, ipAddress) => {
