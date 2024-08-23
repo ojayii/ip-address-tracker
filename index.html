@@ -23,7 +23,9 @@
     <h1>IP Address Tracker</h1>
     <form novalidate>
       <input type="text" id="ip-input" 
-        placeholder="Search for any IP address or domain" required>
+        placeholder="Search for any IP address or domain" 
+        pattern="^((25[0-5]|(2[0-4][0-9])|[01]?[0-9][0-9]?)\.){3}(25[0-5]|(2[0-4][0-9])|[01]?[0-9][0-9]?)$" 
+        title="Please enter a valid IP address (e.g., 192.168.1.1)" required>
       <label for="ip-input">Ip address input</label>
       <button type="submit">
         <img src="./images/icon-arrow.svg" alt="btn">
@@ -56,5 +58,4 @@
 
   <script src="./main.js"></script>
 </body>
-
 </html>

@@ -46,12 +46,8 @@ header>h1 {
 header>form {
     width: 100%;
     text-align: center;
-    /* display: flex;
-    justify-content: center; */
     max-width: 32rem;
     margin: 0 auto;
-    /* border-radius: 10px; */
-    /* overflow: hidden; */
     position: relative;
     margin-bottom: 1rem;
 }
@@ -66,7 +62,7 @@ header>form>input[type="text"] {
 header>form>input[type="text"]:user-invalid {
     outline: none;
     border: none;
-    outline: 2px solid red !important;
+    outline: 2px solid red;
 }
 
 header>form>input[type="text"]:focus:user-valid {
@@ -87,6 +83,10 @@ header>form>button {
     bottom: 0;
     padding: 1rem;
     border-radius: 0 10px 10px 0;
+}
+
+header>form>button:hover {
+    background-color: var(--very-dark-gray);
 }
 
 .results-container {
@@ -149,7 +149,6 @@ header>form>button {
     min-height: 65vh;
     z-index: 1;
 }
-
 
 @media (max-width: 48em) {
     .results-container>.result,
